@@ -1,5 +1,7 @@
 import { randomUUID } from "node:crypto";
 
 export function generateId(): string {
-  return randomUUID();
+  const uuid = randomUUID();
+  console.log(`Generated UUID: ${uuid}`);
+  return uuid;
 }

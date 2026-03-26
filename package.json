@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "danger": "^13.0.7",
+    "danger-plugin-coverage": "^1.6.2",
+    "danger-plugin-no-console-ext": "^1.2.2",
     "express": "^5.2.1"
   }
 }

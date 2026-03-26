@@ -1,7 +1,9 @@
-import { danger, fail, warn } from "danger";
+import { danger, fail, warn, schedule } from "danger";
+import coverage from "danger-plugin-coverage";
+import noConsole from "danger-plugin-no-console-ext";
 
 const reviewLargePR = () => {
-  const bigPRThreshold = 1;
+  const bigPRThreshold = 50;
 
   if (
     danger.github.pr.additions + danger.github.pr.deletions >
@@ -28,5 +30,7 @@ const reviewMissingTests = () => {
   }
 };
 
+schedule(coverage());
+schedule(noConsole());
 reviewLargePR();
 reviewMissingTests();
