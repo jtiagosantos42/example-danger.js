@@ -23,7 +23,7 @@ const reviewMissingTests = () => {
 
   if (hasAppChanges && !hasTestChanges) {
     warn(
-      "There are library changes, but not tests. That's OK as long as you're refactoring existing code",
+      "There are app changes, but not tests. That's OK as long as you're refactoring existing code",
     );
   }
 };
